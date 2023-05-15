@@ -1,4 +1,4 @@
-# SIMPLE SHELL PROJECT
+<span style="color:red"> # SIMPLE SHELL PROJECT</span>
 
 ##  AUTHORS
 > 1.Tafadzwa Aaliaya Ndoro
