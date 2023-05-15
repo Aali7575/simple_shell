@@ -1,6 +1,6 @@
 # SIMPLE SHELL PROJECT
 
-## **AUTHORS
+## ** AUTHORS
 1.Tafadzwa Aaliaya Ndoro
 2. Anthony Odey
 
