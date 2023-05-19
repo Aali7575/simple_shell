@@ -28,7 +28,8 @@ int main(int argc, char **argv)
 		perror("Exiting shell..");
 		return (-1);
 	}
-	strcpy(lineptr_copy, lineptr);
+
+	lineptr_copy = strdup(lineptr);
 	token = strtok(lineptr, delim);
 
 	 while(token != NULL)
@@ -41,18 +42,18 @@ int main(int argc, char **argv)
 
 	 argv = malloc(sizeof(char *) * tokens_number);
 
-	 for (i=0; token != NULL; i++)
+	 for (i=0; argv[i] != NULL; i++)
 	 {
 		 argv[i] = malloc(sizeof(char) * strlen(token));
 				 strcpy(argv[i], token);
 				 token = strtok(NULL, delim);
+				 free(argv[i]);
 				 }
 				 argv[i] = NULL;
 
 
 	}
 	free(argv);
-	free(argv[i]);
 
 	free(lineptr);
 
