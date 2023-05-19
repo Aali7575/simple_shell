@@ -51,8 +51,8 @@ int main(int argc, char **argv)
 
 
 	}
-	/*free(argv);*/
-	/*free(argv[i]);*/
+	free(argv);
+	free(argv[i]);
 
 	free(lineptr);
 
