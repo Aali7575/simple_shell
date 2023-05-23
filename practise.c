@@ -1,5 +1,23 @@
 #include "main.h"
 
+void exem(char **argv)
+{
+        char *pname = NULL;
+
+        if(argv)
+        {
+                pname = argv[0];
+
+
+if(execve(pname,argv,NULL) == -1)
+{
+        perror("Error");
+}
+
+}
+
+}
+
 int main(int argc, char **argv)
 {
 	(void)argc;
@@ -62,10 +80,10 @@ int main(int argc, char **argv)
 
 
 	}
-	free(argv);
 
 	free(lineptr);
 	free(lineptr_copy);
+	free(argv);
 
 	return (0);
 
