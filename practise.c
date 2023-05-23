@@ -10,6 +10,7 @@ int main(int argc, char **argv)
 	size_t line_size = 0;
 	char *lineptr = NULL;
 	char *token;
+	char *token2;
 	const char *delim = (" \n");
 	char *lineptr_copy;
 	int tokens_number;
@@ -30,6 +31,12 @@ int main(int argc, char **argv)
 	}
 
 	lineptr_copy = strdup(lineptr);
+
+	if (lineptr_copy == NULL)
+	{
+		perror("memory allocation error");
+		return (-1);
+	}
 	token = strtok(lineptr, delim);
 
 	 while(token != NULL)
@@ -39,23 +46,26 @@ int main(int argc, char **argv)
 	 }
 
 	 tokens_number++;
+	 token2 = strtok(lineptr_copy, delim);
 
 	 argv = malloc(sizeof(char *) * tokens_number);
 
-	 for (i=0; argv[i] != NULL; i++)
+	 for (i=0; token2 != NULL; i++)
 	 {
-		 argv[i] = malloc(sizeof(char) * strlen(token));
-				 strcpy(argv[i], token);
-				 token = strtok(NULL, delim);
-				 free(argv[i]);
+		 argv[i] = malloc(sizeof(char) * strlen(token2));
+				 strcpy(argv[i], token2);
+				 token2 = strtok(NULL, delim);
 				 }
 				 argv[i] = NULL;
+				 free(argv[i]);
+				 exem(argv);
 
 
 	}
 	free(argv);
 
 	free(lineptr);
+	free(lineptr_copy);
 
 	return (0);
 

@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include <errno.h>
 
-
+void exem(char **argv);
 
 
 #endif
