@@ -17,4 +17,5 @@
 #define MAX_COMMAND_LENGTH 100
 #define MAX_ARGS 10
 #define MAX_PATH_LENGTH 1024
+#define STDOUT_FD 1
 extern char **environ;
