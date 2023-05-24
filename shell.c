@@ -1,7 +1,17 @@
-#include "shell.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+#define MAX_COMMAND_LENGTH 1024
 
 int main() 
 {
+
+char *const envp[] = {NULL};
+
 char command[MAX_COMMAND_LENGTH];
 pid_t child_pid;
 int status;
@@ -49,11 +59,10 @@ exit(1);
 }
 argv[0] = strdup(command);
 argv[1] = NULL;
-char *const envp[] = {NULL};
-if (execve(command, argv, envp) == -1)
-{
-perror("execveerrror");
-exit(1);
+
+if (execve(command, argv, envp) == -1) {
+    perror("execve");
+    exit(EXIT_FAILURE);
 }
 } else
 {
