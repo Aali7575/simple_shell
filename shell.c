@@ -3,7 +3,7 @@
 
 
 
-int shell_main() 
+int shell_john() 
 {
 
 char *const envp[] = {NULL};

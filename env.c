@@ -10,7 +10,7 @@
 
 
 
-int env_main()
+int env_ndoro()
 {
 char command[MAX_COMMAND_LENGTH];
 char *args[MAX_ARGS];

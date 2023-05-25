@@ -2,8 +2,8 @@
 
 int main(void)
 {
-    return path_main();
-    return shell_main();
-    return env_main();
-    return exit_main();
+    path_tito();
+    shell_john();
+    env_ndoro();
+    return exit_otis();
 }

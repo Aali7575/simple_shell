@@ -11,7 +11,7 @@ void exit_shell(void)
 {
 exit(EXIT_SUCCESS);
 }
-int exit_main(void)
+int exit_otis(void)
 {
 char command[MAX_COMMAND_LENGTH];
 ssize_t bytes_written;

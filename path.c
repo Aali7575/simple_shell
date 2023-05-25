@@ -1,6 +1,6 @@
 #include "shell.h"
 
-int path_main(void)
+int path_tito(void)
 {
     char command[MAX_COMMAND_LENGTH];
     char *args[MAX_ARGS];
