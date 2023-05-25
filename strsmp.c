@@ -1,11 +1,11 @@
 #include "tito.h"
 /**
- * strcmp - unction that compares two strings
+ * _strcmp - unction that compares two strings
  * @s1: first function
  * @s2: second function
  * Return: val
  */
-int strcmp(char *s1, char *s2)
+int _strcmp(char *s1, char *s2)
 {
 	int cmp = 0;
 

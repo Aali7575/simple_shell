@@ -17,15 +17,16 @@ typedef struct denum
 	int cnt;
 } denum;
 void prompt(char **arv, char **envp, bool flg);
-int strcmp(char *s1, char *s2);
-void exit(char *cmd);
-void runcmd(char **rgv, char **arv, char **envp);
-char *tito(char *cmd);
-char *_strncpy(char *pep, char *src, int n);
-char *dtr(char *pep, char *src);
-char *path(char **rgv, char *cmd);
-char *_strcpy(char *pep, char *src);
+int _strcmp(char *s1, char *s2);
+char *_strcat(char *dest, char *src);
+char *pathb(char **rgv, char *cmd);
+char *_strcpy(char *dest, char *src);
 int _strlen(char *s);
+void handle_exit(char *cmd);
+void runcmd(char **rgv, char **arv, char **envp);
+char *trim(char *cmd);
+char *_strncpy(char *dest, char *src, int n);
+/*void geterror(int cnt, char **arv, char *cmd);*/
 void geterror(denum *n, char **arv, char *cmd);
-
+/*void search_path(char **rgv, char *cmd, char **envp);*/
 #endif

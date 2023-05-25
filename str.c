@@ -1,22 +1,22 @@
 #include "tito.h"
 /**
  * _strncpy - copy n char
- * @pep: string argument
+ * @dest: string argument
  * @src: string argument for src
  * @n: integer argument
- * Return: pep
+ * Return: dest
  */
-char *_strncpy(char *pep, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
 	int i;
 
 	for (i = 0; i < n && src[i] != '\0'; i++)
 	{
-		pep[i] = src[i];
+		dest[i] = src[i];
 	}
 	for (; i < n; i++)
 	{
-		pep[i] = '\0';
+		dest[i] = '\0';
 	}
-	return (pep);
+	return (dest);
 }

@@ -13,4 +13,3 @@ int main(int arc, char **arv, char **envp)
 	prompt(arv, envp, interactive);
 	return (0);
 }
-
