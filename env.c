@@ -8,9 +8,9 @@
  */
 
 
-extern char **environ;
 
-int main()
+
+int env_main()
 {
 char command[MAX_COMMAND_LENGTH];
 char *args[MAX_ARGS];

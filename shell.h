@@ -12,6 +12,10 @@
 #include <fcntl.h>
 #include <dirent.h>
 #include <errno.h>
+int path_main(void);
+int exit_main(void);
+int shell_main(void);
+int env_main(void);
 #endif
 
 #define MAX_COMMAND_LENGTH 100
