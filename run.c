@@ -1,16 +1,15 @@
 #include "tito.h"
 /**
- * _strlen - length of a string
+ * _strlen - length of a
  * @s: string
  * Return: length
  */
 int _strlen(char *s)
 {
-	int i = 0;
-
-	while (*(s + i) != '\0')
-	{
-		i++;
-	}
-	return (i);
+int i = 0;
+while (*(s + i) != '\0')
+{
+i++;
+}
+return (i);
 }
