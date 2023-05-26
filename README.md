@@ -1,1 +1,1 @@
-this is our simple shell project
+This is for our shell project
